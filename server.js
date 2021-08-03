@@ -8,7 +8,7 @@ require('dotenv').config();
 const weatherData = require('./data/weather.json');
 server.use(cors());
 
-const PORT = 3001;
+const PORT = process.env.PORT || 4444;
 // http://localhost:4444/weather?lat=31.95&lon=35.92&searchQuery=Amman
 
 server.get('/weather', (req, res) => {
