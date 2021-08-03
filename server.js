@@ -35,9 +35,7 @@ server.get('/weather', (req, res) => {
     }
 
 })
-const errorHandling=()=>{
-    
-}
+
 const weatherForcastObject = (weatherObj) => {
     const forcastObj = [];
 
@@ -54,7 +52,10 @@ return forcastObj;
 
 };
 
-
+// http://localhost:3010/
+server.get('*',(req,res) => {
+    res.status(404).send('route not found');
+})
 
 class Forcast {
 
