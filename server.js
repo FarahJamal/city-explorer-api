@@ -9,7 +9,7 @@ const weatherData = require('./data/weather.json');
 server.use(cors());
 
 const PORT = 3001;
-// http://localhost:3001/weather?lat=31.95&lon=35.91&searchQuery=Amman
+// http://localhost:4444/weather?lat=31.95&lon=35.92&searchQuery=Amman
 
 server.get('/weather', (req, res) => {
     const lat = Number(req.query.lat);
@@ -35,7 +35,9 @@ server.get('/weather', (req, res) => {
     }
 
 })
-
+const errorHandling=()=>{
+    
+}
 const weatherForcastObject = (weatherObj) => {
     const forcastObj = [];
 
