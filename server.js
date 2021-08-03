@@ -35,7 +35,9 @@ server.get('/weather', (req, res) => {
     }
 
 })
-
+const errorHandling=()=>{
+    
+}
 const weatherForcastObject = (weatherObj) => {
     const forcastObj = [];
 
