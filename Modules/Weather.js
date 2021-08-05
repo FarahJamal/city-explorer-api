@@ -12,6 +12,7 @@ async function getWeatherHandler(req, res) {
         .then(result => {
             console.log('inside promise');
             let weatherArray = result.data
+           
             res.send(wetherForObject(weatherArray));
         })
         .catch(err => {
@@ -31,6 +32,7 @@ const wetherForObject = (weatherObj) => {
         console.log(forCastObj);
     });
     return forCastObj;
+
 };
 class Forcast {
     constructor(description, date) {
